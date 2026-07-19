@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 val clip = data.clipData!!
                 Array(clip.itemCount) { i -> clip.getItemAt(i).uri }
             } else null
-            filePathCallback?.onActivityResult(results)
+            filePathCallback?.onReceiveValue(results)
             filePathCallback = null
         }
 
